@@ -1,0 +1,37 @@
+.customTabs {
+    background: goldenrod;
+    border-radius: 10px;
+    padding: 5px 5px !important;
+    box-sizing: border-box !important;
+    width: 90%;
+
+}
+
+.customTabs .nav-link {
+    color: #000 !important;
+    padding: 4px 10px !important;
+    font-weight: 600;
+}
+
+.customTabs .nav-link:hover {
+    border: none !important;
+}
+
+.customTabs .nav-link.active {
+    color: #000 !important;
+    border-radius: 8px !important;
+     background:linear-gradient(#fe4e36,#ff7715);
+
+}
+
+@media screen and (max-width:460px) {
+    .customTabs .nav-link {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        font-size: 13px;
+    }
+
+}

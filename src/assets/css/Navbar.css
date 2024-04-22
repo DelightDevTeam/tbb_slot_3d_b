@@ -1,0 +1,29 @@
+.navbars{
+    cursor: pointer;
+    background: #e3b10e;
+    box-shadow: 0 3px 3px #b81212;
+    color: #ddd;
+    width: 100%;
+}
+.profileIcon{
+    font-size: 25px;
+}
+
+@media screen and  (max-width:500px) {
+    .profileIcon{
+        font-size: 20px;
+    }
+}
+@media screen and  (max-width:400px) {
+    .profileIcon{
+        font-size: 18px;
+    }
+    .playerId{
+        font-size: 16px;
+    }
+}
+@media screen and  (max-width:340px) {
+    .playerId{
+        font-size: 15px;
+    }
+}

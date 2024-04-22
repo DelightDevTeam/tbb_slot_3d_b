@@ -1,0 +1,103 @@
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    border: 3px solid #000  !important;
+    font-weight: bold;
+    /* box-shadow: 0px 5px 10px 1px #b80000; */
+}
+
+@media screen and (min-width:900px) {
+    /* .imgStyles{
+        width: 250px;
+        height: auto;
+    } */
+
+    .tabStyles{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:900px) and (min-width:750px) {
+    /* .imgStyles{
+        width: 200px;
+        height: auto;
+        margin: 0 2px;
+    } */
+    .tabStyles{
+        width: 100px;
+        height: 70px;
+
+    }
+
+    .tabStyles p {
+        display: block;
+    }
+}
+
+@media screen and (max-width:750px) and (min-width:600px) {
+    /* .imgStyles{
+        width: 150px;
+        height: auto;
+    } */
+
+    .tabStyles{
+        width: 90px;
+        height: 65px;
+
+    }
+
+    .tabStyles p {
+        display: block;
+    }
+}
+
+@media screen and (max-width:600px) and (min-width:500px) {
+    /* .imgStyles{
+        width: 120px;
+        height: auto;
+    } */
+
+    .tabStyles{
+        width: 80px;
+        height: 65px;
+
+    }
+
+    .tabStyles p {
+        display: block;
+    }
+}
+
+@media screen and (max-width:500px) and (min-width:415px){
+    /* .imgStyles{
+        width: 90px;
+        height: auto;
+    } */
+
+    .tabStyles{
+        width: 65px;
+        height: 70px;
+
+    }
+
+    .tabStyles p {
+        display: block;
+    }
+}
+
+@media screen and (max-width:415px){
+    /* .imgStyles{
+        width: 90px;
+        height: auto;
+    } */
+
+    .tabStyles{
+        width: 55px;
+        height: 65px;
+
+    }
+
+    .tabStyles p {
+        display: block;
+    }
+}
