@@ -65,7 +65,7 @@ const HomeTabs = ()=>{
           .then((data) => {
             console.log(data);
             // setLoader(false);
-            // window.location.href = data.data;
+            window.location.href = data.data;
           })
           .catch((error) => {
             console.error("Launch Game error:", error);
