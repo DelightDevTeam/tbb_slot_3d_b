@@ -29,21 +29,31 @@ const HomeTabs = ()=>{
     const {data: tabs} = useFetch(BASE_URL+"/gameType");
     
     const slots = tabs[0]?.products;
+    const slotCode = tabs[0]?.code;
     const lives = tabs[1]?.products;
+    const liveCode = tabs[1]?.code;
     const sports = tabs[2]?.products;
+    const sportCode = tabs[2]?.code;
     const fishes = tabs[3]?.products;
-    console.log(slots);
+    const fishCode = tabs[3]?.code;
+    // console.log(slots);
     
-    const launchGame = (gameId) => {
-        setLoader(true);
+    const launchGame = (productId, gameTypeId) => {
+        // setLoader(true);
+        let gameData = {
+            "productId": productId,
+            "gameType": gameTypeId
+        }
+        console.log(gameData);
         //fetch api calling
-        fetch(BASE_URL + "/launchGame/" + gameId, {
-          method: "GET",
+        fetch(BASE_URL + "/game/Seamless/LaunchGame", {
+          method: "POST",
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
             Authorization: "Bearer " + localStorage.getItem("token"),
           },
+          body: JSON.stringify(gameData)
         })
           .then((response) => {
             if (!response.ok) {
@@ -53,26 +63,15 @@ const HomeTabs = ()=>{
             return response.json();
           })
           .then((data) => {
-            // console.log(data.data);
-            setLoader(false);
-            window.location.href = data.data;
+            console.log(data);
+            // setLoader(false);
+            // window.location.href = data.data;
           })
           .catch((error) => {
             console.error("Launch Game error:", error);
           });
       };
 
-    const contentTabs=[
-        // {id:1,imgs:[sport1,sport2,sport3,sport4],title:'All Games'},
-        {id:1,imgs:[casino1,slot1,fish1],title:'Hot Games'},
-        {id:2,imgs:[slot1,slot2,slot3],title:'Slots'},
-        //   {id:4,imgs:[esport1,esport1,esport1],title:'E-Sports'},
-          {id:3,imgs:[casino1,casino2,casino3,casino4],title:'Live Casinos'},
-          {id:4,imgs:[lotto1,lotto2],title:'Lotto'},
-          {id:5,imgs:[fish1,fish2,fish3,fish4,fish5],title:'Fish Hunter '}
-          // {id:6,imgs:[cock1,cock1,cock1]},
-          // {id:7,imgs:[horse1,horse1,horse1]}
-    ]
     return (
        <div style={{marginBottom:'300px'}}>
          <Tab.Container id="left-tabs-example" defaultActiveKey={0}>
@@ -105,8 +104,8 @@ const HomeTabs = ()=>{
                         <div className="row">
                             {slots && slots.map((slot, index)=>{
                                     return  (
-                                        <div className="col-md-2 col-4 my-2">
-                                            <button key={index} className="mx-0 btn" onClick={() => launchGame(slot.code)}>
+                                        <div className="col-md-2 col-4 my-2" key={index}>
+                                            <button className="mx-0 btn" onClick={() => launchGame(slot.id, slotCode)}>
                                                 <img  src={slot.imgUrl} className="w-100 rounded-3 shadow" /> 
                                             </button>
                                         </div>
@@ -114,8 +113,8 @@ const HomeTabs = ()=>{
                             })}
                             {lives && lives.map((live, index)=>{
                                     return  (
-                                        <div className="col-md-2 col-4 my-2">
-                                            <button key={index} className="mx-0 btn" onClick={() => launchGame(live.code)}>
+                                        <div className="col-md-2 col-4 my-2" key={index}>
+                                            <button className="mx-0 btn" onClick={() => launchGame(live.id, liveCode)}>
                                                 <img  src={live.imgUrl} className="w-100 rounded-3 shadow" /> 
                                             </button>
                                         </div>
@@ -123,8 +122,8 @@ const HomeTabs = ()=>{
                             })}
                             {sports && sports.map((sport, index)=>{
                                     return  (
-                                        <div className="col-md-2 col-4 my-2">
-                                            <button key={index} className="mx-0 btn" onClick={() => launchGame(sport.code)}>
+                                        <div className="col-md-2 col-4 my-2" key={index}>
+                                            <button className="mx-0 btn" onClick={() => launchGame(sport.id, sportCode)}>
                                                 <img  src={sport.imgUrl} className="w-100 rounded-3 shadow" /> 
                                             </button>
                                         </div>
@@ -132,8 +131,8 @@ const HomeTabs = ()=>{
                             })}
                             {fishes && fishes.map((fish, index)=>{
                                     return  (
-                                        <div className="col-md-2 col-4 my-2">
-                                            <button key={index} className="mx-0 btn" onClick={() => launchGame(fish.code)}>
+                                        <div className="col-md-2 col-4 my-2" key={index}>
+                                            <button className="mx-0 btn" onClick={() => launchGame(fish.id, fishCode)}>
                                                 <img  src={fish.imgUrl} className="w-100 rounded-3 shadow" /> 
                                             </button>
                                         </div>
@@ -155,8 +154,8 @@ const HomeTabs = ()=>{
                                 <div className="row">
                                 {content?.products && content?.products.map((product, index)=>{
                                         return  (
-                                            <div className="col-md-2 col-4 my-2">
-                                                <button key={index} className="mx-0 btn" onClick={() => launchGame(product?.code)}>
+                                            <div className="col-md-2 col-4 my-2" key={index}>
+                                                <button className="mx-0 btn" onClick={() => launchGame(product?.id, content?.code)}>
                                                     <img  src={product?.imgUrl} className="w-100 rounded-3 shadow" /> 
                                                 </button>
                                             </div>
