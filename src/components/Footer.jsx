@@ -27,7 +27,7 @@ const Footer = () =>{
             id:4,icon:RiGameLine,title:'History',link:'/history'
         },
         {
-            id:5,icon:FaUserAlt,title:'Profile',link:'/profile'
+            id:5,icon:FaUserAlt,title:'Account',link:'/account'
         }]
     return (
         <div className="fixed-bottom mx-auto" style={{background:'#e3b10e'}}>

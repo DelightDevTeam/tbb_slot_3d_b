@@ -10,6 +10,9 @@ import GameLog from "../pages/GameLog";
 import History from "../pages/History";
 import ChangePassword from "../pages/ChangePassword";
 import NewPlayerChangePassword from "../pages/NewPlayerChangePassword";
+import AccountPage from "../pages/Account";
+import ThreeDBetHistoryPage from "../pages/ThreeDBetHistory";
+import BankPage from "../pages/Bank";
 
 const router = createBrowserRouter([
    
@@ -42,6 +45,10 @@ const router = createBrowserRouter([
           element : <Profile />
         },
         {
+          path : "/account",
+          element : <AccountPage />
+        },
+        {
           path : "/register",
           element : <Register />
         },
@@ -56,6 +63,14 @@ const router = createBrowserRouter([
         {
           path : "/new-player-change-password",
           element : <NewPlayerChangePassword />
+        },
+        {
+          path : "/3d-bet-history",
+          element : <ThreeDBetHistoryPage />
+        },
+        {
+          path : "/bank",
+          element : <BankPage />
         },
         
       ]
