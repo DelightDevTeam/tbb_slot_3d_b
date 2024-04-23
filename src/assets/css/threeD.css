@@ -1,0 +1,87 @@
+.startProfile{
+    background: linear-gradient(180deg, #e6c24d, #775714) ;
+    border: 1px solid #775714;
+    cursor: pointer;
+}
+.startProfile span{
+    font-size: 14px;
+}
+.twoDList{
+    background: rgb(227, 177, 14);
+}
+.twoDBetBtn{
+    background: linear-gradient(180deg, #e6c24d, #775714);
+    border: 1px solid #775714;
+}
+.twoDResult{
+    border: 10px dashed #775714;
+}
+.modal{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.modal-content{
+    width: 350px;
+    margin:50px auto;
+}
+.twoDBetHistory .nav-link{
+    color: #000 !important;
+    background:#E3B10E;
+    border-radius: 0 !important;
+    padding: 10px 20px !important;
+    border: 1px solid 775714;
+}
+.twoDBetHistory .nav-link:hover{
+    border:0 0 inherit 0 !important;
+}
+.twoDBetHistory .nav-tabs{
+    border-bottom: 0 !important;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.twoDBetHistory .nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 5px dashed #B81212;
+     background:#E3B10E;
+}
+.betContainer{
+    background: linear-gradient(180deg, #e6c24d, #775714) ;
+}
+.twoDWinnerInfo{
+    background: rgb(227, 177, 1);
+    border: 1px solid #775714;
+    cursor: pointer;
+}
+@media screen and (max-width:440px) {
+    .topWinnerCard small{
+        font-size: 12px;
+    }
+    .topWinnerCard h6{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:390px) {
+    .modal-content{
+        width: 280px;
+    }
+}
+@media screen and (max-width:360px) {
+    .startProfile span{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:320px){
+    .twoDBetHistory .nav-link{
+        padding: 10px  !important;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:300px) {
+    .modal-content{
+        width: 260px;
+    }
+}

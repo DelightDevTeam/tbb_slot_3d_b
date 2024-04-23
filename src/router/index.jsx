@@ -13,6 +13,10 @@ import NewPlayerChangePassword from "../pages/NewPlayerChangePassword";
 import AccountPage from "../pages/Account";
 import ThreeDBetHistoryPage from "../pages/ThreeDBetHistory";
 import BankPage from "../pages/Bank";
+import ThreeDPage from "../pages/ThreeD";
+import ThreeDWinnersPage from "../pages/ThreeDWinners";
+import ThreeDHistoryPage from "../pages/ThreeDHistory";
+import ThreeDResultsPage from "../pages/ThreeDResults";
 
 const router = createBrowserRouter([
    
@@ -64,13 +68,29 @@ const router = createBrowserRouter([
           path : "/new-player-change-password",
           element : <NewPlayerChangePassword />
         },
+         {
+          path : "/bank",
+          element : <BankPage />
+        },
+        {
+          path : "/3d",
+          element : <ThreeDPage />
+        },
+        {
+          path : "/3d-history",
+          element : <ThreeDHistoryPage />
+        },
+        {
+          path : "/3d-results",
+          element : <ThreeDResultsPage />
+        },
         {
           path : "/3d-bet-history",
           element : <ThreeDBetHistoryPage />
         },
         {
-          path : "/bank",
-          element : <BankPage />
+          path : "/3d-winners",
+          element : <ThreeDWinnersPage />
         },
         
       ]

@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap'
 
 const ThreeDBetHistoryPage = () => {
   return (
-    <div className='px-2 px-sm-5'>
+    <div className='px-2 px-sm-5' style={{marginBottom:'150px'}}>
         <h5 className="text-center fw-bold mt-4 mb-4">3D  ထီထိုးမှတ်တမ်း</h5>
         <Table striped bordered hover size="sm">
                 <thead>
