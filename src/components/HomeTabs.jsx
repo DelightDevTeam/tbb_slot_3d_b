@@ -1,27 +1,10 @@
 import React from "react";
 import { Tab , Nav, NavLink} from "react-bootstrap";
 import {Row, Col} from "react-bootstrap";
-
+import {NavLink as RouterNavLink} from 'react-router-dom';
 import '../assets/css/HomeTabs.css'
 import all_img from '../assets/img/all.png'
-
-import slot1 from '../assets/img/HomeTabs/slot1.png'
-import slot2 from '../assets/img/HomeTabs/slot2.png'
-import slot3 from '../assets/img/HomeTabs/slot3.png'
-
-import casino1 from '../assets/img/HomeTabs/casino.png'
-import casino2 from '../assets/img/HomeTabs/casino2.png'
-import casino3 from '../assets/img/HomeTabs/casino3.png'
-import casino4 from '../assets/img/HomeTabs/casino4.png'
-
-import fish1 from '../assets/img/HomeTabs/fish1.png'
-import fish2 from '../assets/img/HomeTabs/fish2.png'
-import fish3 from '../assets/img/HomeTabs/fish3.png'
-import fish4 from '../assets/img/HomeTabs/fish4.png'
-import fish5 from '../assets/img/HomeTabs/fish5.png'
-
-import lotto1 from '../assets/img/HomeTabs/lotto1.png'
-import lotto2 from '../assets/img/HomeTabs/lotto2.png'
+import threeD from '../assets/img/3d.png'
 import useFetch from "../hooks/useFetch";
 import BASE_URL from "../hooks/baseURL";
 
@@ -94,6 +77,12 @@ const HomeTabs = ()=>{
                         );
                     })
                 }
+                 <RouterNavLink to={'/3d'} className="m-1 m-sm-2" >
+                                <div   className="text-center tabStyles rounded" style={{background:'#b81212',color:'#ddd'}}>
+                                    <img src={threeD} style={{width:'40px',height:'35px'}} />
+                                    <p className="p-0 m-0 text-center">3D</p>
+                                </div>
+                            </RouterNavLink>
               
             </Nav>
 
