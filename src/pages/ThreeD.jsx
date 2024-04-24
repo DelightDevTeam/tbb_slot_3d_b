@@ -45,7 +45,7 @@ const ThreeDPage = () => {
       })}
     </div>
       <div className="text-center my-4">
-      <NavLink to={'/lotto/3d/bet'} > 
+      <NavLink to={'/3d/bet'} > 
         <Button className="twoDBetBtn rounded-2 py-2 px-4 text-white" variant="primary"  style={{background:'#E3B10E'}}>
             ထိုးမည်
         </Button>

@@ -17,6 +17,8 @@ import ThreeDPage from "../pages/ThreeD";
 import ThreeDWinnersPage from "../pages/ThreeDWinners";
 import ThreeDHistoryPage from "../pages/ThreeDHistory";
 import ThreeDResultsPage from "../pages/ThreeDResults";
+import ThreeDBetPage from "../pages/ThreeDBet";
+import ThreeDConfirmPage from "../pages/ThreeDConfirm";
 
 const router = createBrowserRouter([
    
@@ -79,6 +81,14 @@ const router = createBrowserRouter([
         {
           path : "/3d-history",
           element : <ThreeDHistoryPage />
+        },
+        {
+          path : "/3d/bet",
+          element : <ThreeDBetPage />
+        },
+        {
+          path : "/3d/confirm",
+          element : <ThreeDConfirmPage />
         },
         {
           path : "/3d-results",
