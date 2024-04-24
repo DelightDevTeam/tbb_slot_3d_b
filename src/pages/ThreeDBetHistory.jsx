@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Table } from 'react-bootstrap'
 
 const ThreeDBetHistoryPage = () => {
+    const [threeDBetData,setThreeDBetData]=useState(JSON.parse(localStorage.getItem('user-3d-confirm'))||[])
   return (
     <div className='px-2 px-sm-5' style={{marginBottom:'150px'}}>
         <h5 className="text-center fw-bold mt-4 mb-4">3D  ထီထိုးမှတ်တမ်း</h5>
@@ -16,18 +17,14 @@ const ThreeDBetHistoryPage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>100</td>
-                        <td>500</td>
-                        <td>23/4/2024</td>
+                     {threeDBetData?.map((item,index)=>{
+                        return <tr key={index}>
+                        <td>{index+1}</td>
+                        <td>{item.number}</td>
+                        <td>{item.amount}</td>
+                        <td>{new Date(item.date).toLocaleDateString()}</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>100</td>
-                        <td>500</td>
-                        <td>23/4/2024</td>
-                    </tr>
+                    })}
 
                 </tbody>
             </Table>

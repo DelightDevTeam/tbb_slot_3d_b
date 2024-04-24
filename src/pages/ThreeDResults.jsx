@@ -1,12 +1,14 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import '../assets/css/threeD.css';
+import { useState } from 'react';
 
 function ThreeDResultsPage() {
- const threeDBetData=[
-    {id:1,date:'16.11.2023',threeD:'123'},
-    {id:2,date:'1.11.2023 ',threeD:'456'},
-]
+//  const threeDBetData=[
+//     {id:1,date:'16.11.2023',threeD:'123'},
+//     {id:2,date:'1.11.2023 ',threeD:'456'},
+// ]
+const [threeDBetData,setThreeDBetData]=useState(JSON.parse(localStorage.getItem('user-3d-confirm'))||[])
 const threeDListsArray=[
     {id:1,date:'16.11.2023',threeD:'970'},
     {id:2,date:'1.11.2023 ',threeD:'970'},
@@ -25,17 +27,21 @@ const threeDListsArray=[
       className="mb-3"
     >
       <Tab eventKey="home" title="3D  ထီထိုးမှတ်တမ်း">
-      {threeDBetData.map((item)=>{
+      {threeDBetData?.map((item)=>{
         return <div className="rounded-4 p-2 p-sm-3 mb-3 twoDList ">
-          <h5>{item.time}</h5>
+          {/* <h5>{new Date(item.date).toLocaleDateString()}</h5> */}
           <div className="d-flex align-items-center justify-content-between">
             <div>
               <h6 className='fw-bold'>Date</h6>
-              <h6>{item.date}</h6>
+              <h6>{new Date(item.date).toLocaleDateString()}</h6>
             </div>
             <div>
               <h6 className='fw-bold'>3D</h6>
-              <h6>{item.threeD}</h6>
+              <h6>{item.number}</h6>
+            </div>
+            <div>
+              <h6 className='fw-bold'>Amount</h6>
+              <h6>{item.amount}</h6>
             </div>
             
           </div>
