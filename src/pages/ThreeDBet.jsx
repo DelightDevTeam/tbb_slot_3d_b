@@ -21,12 +21,14 @@ const ThreeDBetPage = () => {
         setUser3D(user3D.filter(n=>n.number!==number));
     }
      const addUser3D=()=>{
+       if(number.length===3){
         if(!user3DNumbers.includes(number)){
-       if(number && amount) {
-        setUser3DNumbers([...user3DNumbers,number])
-        setUser3D([...user3D,{number,amount,isEdit:false}])
-         setNumber('');
-        }}
+            if(number && amount) {
+             setUser3DNumbers([...user3DNumbers,number])
+             setUser3D([...user3D,{number,amount,isEdit:false}])
+              setNumber('');
+             }}
+       }
     }
     const handleIsEdit=(number)=>{
         setUser3D(user3D.map((n)=>n.number==number ? n={...n,isEdit:!n.isEdit} : n))
@@ -52,13 +54,16 @@ const ThreeDBetPage = () => {
      <span>10:20:00 AM</span>
    </div>
  </div> 
-  <div className="d-flex flex-column align-items-center mt-4">
+  <div className="threeDForm d-flex flex-column align-items-center mt-4">
                    <Form.Group className="mb-3" controlId="formBasicPassword">
                           <Form.Control type="number" 
                          className="inputs"
                          placeholder="စာရိုက်ပြီး ဂဏန်းရွေးမည်"
                          value={number}
-                         onChange={(e)=>setNumber(e.target.value)}
+                         required
+                         onChange={(e)=>{
+                            setNumber(e.target.value);
+                          }}
                          />
                          
                      </Form.Group>
@@ -69,7 +74,9 @@ const ThreeDBetPage = () => {
                             <Form.Control type="number" 
                          className="inputs"
                          value={amount}
-                         onChange={(e)=>setAmount(e.target.value)}
+                         onChange={(e)=>{
+                                 setAmount(e.target.value)
+                          }}
                          placeholder="ငွေပမာဏ (အနည်းဆုံး 100 ကျပ်)"  />
                       </Form.Group>
                      <div className="d-flex align-items-center gap-2">
@@ -81,13 +88,23 @@ const ThreeDBetPage = () => {
                          
                      </div>
                      <div  >
-                         <Button onClick={addUser3D} className="me-2 px-4 border border-none d-flex align-items-center " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>
+                         <Button disabled={!amount && !number}  onClick={addUser3D} className="me-2 px-4 border border-none d-flex align-items-center " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>
                               <span className="d-block">ထည့်မည်</span>
                          </Button>
                      </div>
                      </div>
    </div> 
-   <Table className='mt-2' striped bordered hover size="sm">
+   <p className='m-0 p-0 mb-1'>ရွေးချယ်ထားသောဂဏန်းများ - 
+   <span className="fw-bold ms-1">{user3D.length}</span> </p>
+   <div className='p-3 rounded-3 mb-2 d-flex flex-wrap align-items-center gap-2 gap-sm-4' style={{border:'2px solid grey',minHeight:'100px'}}>
+        {user3D.map((item,index)=>{
+            return <div className='numberBox rounded-3 bg-warning d-flex align-items-center justify-content-center' style={{width:'70px',height:'35px'}}>
+                    <span>{item.number}</span>
+                    <span onClick={()=>delNumber(item.number)} className='minus'>-</span>
+            </div>
+        })}
+   </div>
+   {/* <Table className='mt-2' striped bordered hover size="sm">
                 <thead>
                     <tr>
                         <th>စဉ်</th>
@@ -116,7 +133,7 @@ const ThreeDBetPage = () => {
                     })}
                    
                     </tbody>
-            </Table>
+            </Table> */}
            
             <Button onClick={user3dBet} className="me-2 px-4 border border-none d-flex align-items-center " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>
             <NavLink to={'/3d/confirm'}>

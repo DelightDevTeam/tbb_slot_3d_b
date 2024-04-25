@@ -3,6 +3,7 @@ import { Button, Table } from 'react-bootstrap'
 import { BiEdit } from 'react-icons/bi';
 import { IoMdRepeat } from 'react-icons/io'
 import { MdDelete } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 function threeDAllR(inputArray) {
     const resultArray = [];
 
@@ -66,6 +67,7 @@ function threeDAllR(inputArray) {
     return resultArray.sort(); // Sort the array to ensure the desired order
 }
 const ThreeDConfirmPage = () => {
+    const navigate=useNavigate();
     const [user3D,setUser3D]=useState(JSON.parse(localStorage.getItem('user-3d-bet'))|| []);
      const [numbers,setNumbers]=useState(user3D.map((u)=>u.number))
      let total=0;
@@ -109,6 +111,7 @@ const userBetConfirm=()=>{
     localStorage.removeItem('user-3d-bet');
     setNumbers([]);
     setUser3D([]);
+    navigate('/3d-bet-history')
     
 }
   return (
@@ -166,7 +169,7 @@ const userBetConfirm=()=>{
             </Table>
        
         <Button onClick={ userBetConfirm}  style={{background:' linear-gradient(rgb(254, 78, 54), rgb(255, 119, 21))'}} >
-         ထိုးမည် 
+        အတည်ပြုမည် 
         </Button>
      </div>
   )

@@ -59,6 +59,34 @@
 .inputs{
     width: 300px;
 }
+.threeDForm{
+    margin: auto;
+    width: 25%;
+ }
+ .numberBox{
+    position: relative;
+ }
+ .minus{
+    cursor: pointer;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+     justify-content: center;
+    background: red;
+    width: 20px;
+    height: 20px;
+     color: #fff;
+    font-size: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top:-5px;
+    right: 0;
+ }
+ @media screen and (max-width:700px) {
+    .threeDForm{
+        width: 60%;
+    }
+ }
 @media screen and (max-width:440px) {
     .topWinnerCard small{
         font-size: 12px;
@@ -67,6 +95,11 @@
         font-size: 14px;
     }
 }
+@media screen and (max-width:400px) {
+    .threeDForm{
+        width: 90%;
+    }
+ }
 @media screen and (max-width:390px) {
     .modal-content{
         width: 280px;
