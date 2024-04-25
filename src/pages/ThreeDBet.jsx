@@ -8,7 +8,8 @@ import ThreeDModal from '../components/ThreeDModal';
 import { NavLink } from 'react-router-dom';
 
 const ThreeDBetPage = () => {
-    const [user3D,setUser3D]=useState(JSON.parse(localStorage.getItem('user-3d-bet'))|| []);
+    // const [user3D,setUser3D]=useState(JSON.parse(localStorage.getItem('user-3d-bet'))|| []);
+    const [user3D,setUser3D]=useState( []);
     const [user3DNumbers,setUser3DNumbers]=useState(user3D.map(u=>u.number))
 
     const [number,setNumber]=useState('');
