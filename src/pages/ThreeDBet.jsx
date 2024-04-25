@@ -12,7 +12,7 @@ const ThreeDBetPage = () => {
     const [user3DNumbers,setUser3DNumbers]=useState(user3D.map(u=>u.number))
 
     const [number,setNumber]=useState('');
-    const [amount,setAmount]=useState('');
+    const [amount,setAmount]=useState('100');
     const editAmount=(newAmount,number)=>{
        const newData= setUser3D(user3D.map((n)=>n.number==number ? n={...n,amount:newAmount} : n))
  
@@ -26,8 +26,7 @@ const ThreeDBetPage = () => {
         setUser3DNumbers([...user3DNumbers,number])
         setUser3D([...user3D,{number,amount,isEdit:false}])
          setNumber('');
-        setAmount('');
-       }}
+        }}
     }
     const handleIsEdit=(number)=>{
         setUser3D(user3D.map((n)=>n.number==number ? n={...n,isEdit:!n.isEdit} : n))
@@ -63,6 +62,9 @@ const ThreeDBetPage = () => {
                          />
                          
                      </Form.Group>
+                    <div className='text-start w-100'>
+                    <small className="fw-bold ">ငွေပမာဏ (အနည်းဆုံး 100 ကျပ်)</small>
+                    </div>
                      <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Control type="number" 
                          className="inputs"
@@ -115,11 +117,13 @@ const ThreeDBetPage = () => {
                    
                     </tbody>
             </Table>
-            <NavLink to={'/3d/confirm'}>
+           
             <Button onClick={user3dBet} className="me-2 px-4 border border-none d-flex align-items-center " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>
+            <NavLink to={'/3d/confirm'}>
                               <span className="d-block">ထိုးမည်</span>
+                              </NavLink>
                          </Button>
-            </NavLink>
+            
                
     </div>
   )
