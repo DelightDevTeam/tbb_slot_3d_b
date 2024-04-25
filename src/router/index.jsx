@@ -19,6 +19,10 @@ import ThreeDHistoryPage from "../pages/ThreeDHistory";
 import ThreeDResultsPage from "../pages/ThreeDResults";
 import ThreeDBetPage from "../pages/ThreeDBet";
 import ThreeDConfirmPage from "../pages/ThreeDConfirm";
+import WalletPage from "../pages/Wallet";
+import TopUpPage from "../pages/TopUp";
+import WithDrawPage from "../pages/WithDraw";
+import CashHistoryPage from "../pages/CashHistory";
 
 const router = createBrowserRouter([
    
@@ -74,6 +78,23 @@ const router = createBrowserRouter([
           path : "/bank",
           element : <BankPage />
         },
+        {
+          path : "/wallet",
+          element : <WalletPage />
+        },
+        {
+          path : "/topup",
+          element : <TopUpPage />
+        },
+        {
+          path : "/with-draw",
+          element : <WithDrawPage />
+        },
+        {
+          path : "/transfer-log",
+          element : <CashHistoryPage />
+        },
+        
         {
           path : "/3d",
           element : <ThreeDPage />
