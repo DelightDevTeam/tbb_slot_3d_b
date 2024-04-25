@@ -5,10 +5,12 @@ import { LuClipboardList } from "react-icons/lu";
 import { BsBank2 } from "react-icons/bs";
 import { NavLink } from 'react-router-dom';
 import { FaLock } from "react-icons/fa6";
+import { BiWallet } from 'react-icons/bi';
 
 const AccountPage = () => {
     const links=[
         {id:1,icon:<MdFeaturedPlayList size={23} color='#B81212' />,title:'Profile',link:'/profile'},
+        {id:1,icon:<BiWallet size={23} color='#B81212' />,title:'Wallet',link:'/wallet'},
         {id:2,icon:<LuClipboardList  size={23} color='#B81212' />,title:'3D ထီထိုးမှတ်တမ်း',link:'/3d-bet-history'},
         {id:3,icon:<BsBank2 size={23} color='#B81212'/>,title:'ဘဏ်အကောင့်များ',link:'/bank'},
         {id:4,icon:<FaLock size={23} color='#B81212'/>,title:'Change Password',link:'/changepassword'},

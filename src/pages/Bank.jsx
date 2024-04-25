@@ -3,6 +3,7 @@ import wave from '../assets/img/wave.png';
 import aya from '../assets/img/aya.png';
 import cb from '../assets/img/cb.png';
 import kbz from '../assets/img/kbz.png';
+import BankDescription from '../components/BankDescription';
 
 const BankPage = () => {
     const banks=[wave,aya,cb,kbz];
@@ -16,6 +17,7 @@ const BankPage = () => {
             </div>
         })}
         </div>
+        <BankDescription/>
     </div>
   )
 }
