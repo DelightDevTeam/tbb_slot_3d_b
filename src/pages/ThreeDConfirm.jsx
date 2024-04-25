@@ -165,7 +165,11 @@ const userBetConfirm=()=>{
                          </td>
                      </tr>
                     })}
-                   
+                   <tr>
+                    <td  colSpan={4}>
+                        <h6 className='fw-bold text-center'>Total: {total} MMK</h6>
+                    </td>
+                   </tr>
                     </tbody>
             </Table>
        
