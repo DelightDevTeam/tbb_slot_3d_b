@@ -107,7 +107,7 @@ const userBetConfirm=()=>{
     const finalData=user3D.map((u)=>{
         return {number:u.number,amount:u.amount,date:new Date()}
     });
-    const oldBetData=JSON.parse('user-3d-confirm');
+    const oldBetData=JSON.parse(localStorage.getItem('user-3d-confirm'));
     localStorage.setItem('user-3d-confirm',JSON.stringify([...oldBetData,finalData]))
     localStorage.removeItem('user-3d-bet');
     setNumbers([]);
