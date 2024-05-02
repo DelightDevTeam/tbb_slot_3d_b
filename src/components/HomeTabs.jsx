@@ -58,8 +58,10 @@ const HomeTabs = ()=>{
     return (
        <div style={{marginBottom:'300px'}}>
          <Tab.Container id="left-tabs-example" defaultActiveKey={0}>
-            <Nav variant="pills" className="d-flex justify-content-center">
-                <Nav.Item className="m-1 m-sm-2">
+            <Nav variant="pills"
+               className="categories d-flex  
+             flex-nowrap"   >
+                <Nav.Item className="categoryItem mx-1 mx-sm-2">
                     <Nav.Link eventKey={0} className="text-center tabStyles" style={{background:'#b81212',color:'#ddd'}}>
                         <img src={all_img} width={30} className=""/>
                         <p className="p-0 m-0 text-center">All</p>
@@ -68,16 +70,16 @@ const HomeTabs = ()=>{
                 {
                     tabs && tabs.map((tab, index)=>{
                         return (
-                            <Nav.Item className="m-1 m-sm-2" key={index}>
+                            <Nav.Item  className="categoryItem mx-1 mx-sm-2" key={index}>
                                 <Nav.Link eventKey={tab.id} className="text-center tabStyles" style={{background:'#b81212',color:'#ddd'}}>
-                                    <img src={tab.img_url} size={30} />
+                                    <img src={tab.img_url}   />
                                     <p className="p-0 m-0 text-center">{tab.name}</p>
                                 </Nav.Link>
                             </Nav.Item>
                         );
                     })
                 }
-                 <RouterNavLink to={'/3d'} className="m-1 m-sm-2" >
+                 <RouterNavLink   to={'/3d'} className="categoryItem mx-1 mx-sm-2" >
                                 <div   className="text-center tabStyles rounded" style={{background:'#b81212',color:'#ddd'}}>
                                     <img src={threeD} style={{width:'40px',height:'35px'}} />
                                     <p className="p-0 m-0 text-center">3D</p>
