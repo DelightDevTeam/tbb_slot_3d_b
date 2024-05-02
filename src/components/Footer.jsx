@@ -36,9 +36,11 @@ const Footer = () =>{
                 {
                     footerIcons.map((footerIcon, index)=>{
                         return (
-                            <NavLink key={index} to={footerIcon.link} className="text-center pt-2 text-decoration-none">
-                            <footerIcon.icon size={30} color="#b81212"/>
-                            <p className="fw-bold" style={{color:'#222'}}>{footerIcon.title}</p>
+                            <NavLink key={index} to={footerIcon.link} className="text-center py-2 text-decoration-none">
+                            <footerIcon.icon size={25} color="#b81212"/>
+                            <div>
+                                <small className="fw-bold" style={{color:'#222'}}>{footerIcon.title}</small>
+                            </div>
                             </NavLink>
                         );
                     })
