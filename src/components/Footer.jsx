@@ -30,18 +30,16 @@ const Footer = () =>{
             id:5,icon:FaUserAlt,title:'Account',link:'/account'
         }]
     return (
-        <div className="fixed-bottom mx-auto" style={{background:'#e3b10e'}}>
+        <div className="fixed-bottom mx-auto border-top shadow-lg" style={{background:'#F7F7F7'}}>
             <div className="d-flex justify-content-around align-items-center mt-1">
 
                 {
                     footerIcons.map((footerIcon, index)=>{
                         return (
-                            <NavLink key={index} to={footerIcon.link} className="text-center py-2 text-decoration-none">
-                            <footerIcon.icon size={25} color="#b81212"/>
-                            <div>
-                                <small className="fw-bold" style={{color:'#222'}}>{footerIcon.title}</small>
-                            </div>
-                            </NavLink>
+                            <NavLink key={index} to={footerIcon.link} className="text-center pt-1 pb-2 text-decoration-none">
+                            <footerIcon.icon size={22} color="#C80000"/>
+                                 <p className="fw-bold footerTitle pb-0 mb-0" style={{color:'#000'}}>{footerIcon.title}</p>
+                             </NavLink>
                         );
                     })
                 }
