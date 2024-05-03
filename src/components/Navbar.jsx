@@ -68,14 +68,14 @@ const Navbar = () => {
         <div className='d-flex align-items-center justify-content-between  px-2 px-sm-3 pb-2'>
             <div>
               <FaUserAlt className='me-2' color='#b81212' />
-              <small className='fw-bold text-white playerId'>
+              <small className='fw-bold text-black playerId'>
                 {' '}
                 {user?.name}
               </small>
             </div>
             <div>
               <FaWallet className='me-2' color='#b81212' />
-              <small className='fw-bold text-white playerId'>
+              <small className='fw-bold  text-black playerId'>
                 {' '}
                 :Ks {Number(user.balance).toLocaleString()}
               </small>
