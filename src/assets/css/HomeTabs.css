@@ -11,6 +11,9 @@
     box-shadow: none !important;
     /* box-shadow: 0px 5px 10px 1px #b80000; */
 }
+.gameImg{
+    border: 2px solid #FCE05F;
+}
 .tabStyles{
     min-height: 54.33px;
     min-width: 70px;

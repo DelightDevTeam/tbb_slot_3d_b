@@ -25,8 +25,8 @@ const History = ()=>{
         },
     ]
     return (
-        <div className='py-4 px-2 px-sm-3 px-md-5'>
-            <h1 className="mb-5 text-center text-dark fw-bold">History</h1>
+        <div className='py-4 px-2 px-sm-3 px-md-5' style={{overflowX:'hidden'}}>
+            <h1 className="mb-5 text-center text-white fw-bold">History</h1>
             <Form className='row mb-4'>
                 <Form.Group className="mb-3 col-6 col-sm-3" controlId="exampleForm.ControlInput1">
 
@@ -37,7 +37,10 @@ const History = ()=>{
 
                     <Form.Control type="date" placeholder=" " />
                 </Form.Group>
-                <button style={{ height: '100%', background:'linear-gradient(#fe4e36,#ff7715) '}} className="mx-auto ms-5 btn col-6 col-sm-2">Submit</button>
+                <button style={{ height: '100%',
+                // background:'linear-gradient(#fe4e36,#ff7715)',
+                background:'#FCE05F',
+                 }} className="mx-auto ms-5 text-black fw-bold btn col-6 col-sm-2">Submit</button>
 
             </Form>
             <Tabs

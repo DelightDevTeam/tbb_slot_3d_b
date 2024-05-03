@@ -34,7 +34,7 @@ const Navbar = () => {
               <img src={logo} alt='logo' className='' height={'40px'} />
             </div>
             <div>
-              <h5 className='text-dark fw-bold mt-2'>TBB Slot & 3D</h5>
+              <h5 className='text-white fw-bold mt-2'>TBB Slot & 3D</h5>
             </div>
           </div>
         </NavLink>
@@ -42,7 +42,7 @@ const Navbar = () => {
           {/* Login And Register Btn */}
           {auth ? (
             <div onClick={logout}>
-              <IoMdLogOut size={30} color='#C80000' />
+              <IoMdLogOut size={30} color='#fff' />
             </div>
           ) : (
             <NavLink
@@ -50,7 +50,10 @@ const Navbar = () => {
               className=' btn btn-danger py-1 px-3  '
               style={{
                 fontSize:'13px',
-                backgroundColor: 'rgb(215, 25, 25)',
+                fontWeight:600,
+                background:'#FCE05F',
+                color:'#000',
+                // background: 'linear-gradient(rgb(254, 78, 54), rgb(255, 119, 21))',
                 border: '1px solid gold',
               }}
             >
@@ -67,15 +70,15 @@ const Navbar = () => {
         <hr className='my-0 py-0 border-1 py-1 border-light' />
         <div className='d-flex align-items-center justify-content-between  px-2 px-sm-3 pb-2'>
             <div>
-              <FaUserAlt className='me-2' color='#C80000' />
-              <small className='fw-bold text-black playerId'>
+              <FaUserAlt className='me-2' color='#fff' />
+              <small className='fw-bold text-white playerId'>
                 {' '}
                 {user?.name}
               </small>
             </div>
             <div>
-              <FaWallet className='me-2' color='#C80000' />
-              <small className='fw-bold  text-black playerId'>
+              <FaWallet className='me-2' color='#fff' />
+              <small className='fw-bold  text-white playerId'>
                 {' '}
                 :Ks {Number(user.balance).toLocaleString()}
               </small>

@@ -1,7 +1,8 @@
 .navbars{
     cursor: pointer;
     /* background: #e3b10e; */
-    background: #F7F7F7;
+    /* background: #F7F7F7; */
+    background: #B70000;
     box-shadow: 0 3px 3px #b81212;
     color: #ddd;
     width: 100%;

@@ -12,7 +12,7 @@ const Promotion = ()=>{
     return (
         <>
         <div className="container" style={{marginBottom:'300px'}}>
-            <h2 className="text-center fw-bold mt-4">Promotion</h2>
+            <h2 className="text-center text-white fw-bold mt-4">Promotion</h2>
             {
                 promoImgs.map((img)=>{
                     return(

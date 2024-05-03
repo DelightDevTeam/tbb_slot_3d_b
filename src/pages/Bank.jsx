@@ -8,8 +8,8 @@ import BankDescription from '../components/BankDescription';
 const BankPage = () => {
     const banks=[wave,aya,cb,kbz];
   return (
-    <div className='px-2 px-sm-5 pb-5'>
-        <h5 className="text-center fw-bold mt-4 mb-4">ဘဏ်အကောင့်များ</h5>
+    <div className='px-2 px-sm-5 pb-5' style={{overflowX:'hidden'}}>
+        <h5 className="text-center text-white fw-bold mt-4 mb-4">ဘဏ်အကောင့်များ</h5>
          <div className="row">
         {banks.map((item,index)=>{
             return <div  key={index} className='col-3 col-lg-1 mx-auto'>

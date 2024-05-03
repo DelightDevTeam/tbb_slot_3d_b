@@ -14,10 +14,10 @@ const TopUpPage = () => {
         {id:4,img:cb,name:'CB Pay'},
     ]
   return (
-    <div className='px-3 px-sm-5 py-3' style={{marginBottom:'150px'}}>
-      <h6 className='fw-bold mb-3'>မိမိငွေဖြည့်မည့်ဘဏ်တစ်ခုရွေးပါ</h6>
+    <div className='px-3 px-sm-5 py-3 text-white' style={{marginBottom:'150px'}}>
+      <h6 className='fw-bold mb-3 text-white'>မိမိငွေဖြည့်မည့်ဘဏ်တစ်ခုရွေးပါ</h6>
       <div className="row">
-      {banks?.map((item)=>{
+      {banks.map((item)=>{
         return  <img onClick={()=>setSelectedBank(item.name)} className='col-3' key={item.id} src={item.img} />
       })}
       </div>

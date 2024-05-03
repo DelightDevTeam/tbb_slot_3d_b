@@ -79,7 +79,7 @@ const ChangePassword = ()=>{
 
     return (
         <>
-        <div className="container " style={{marginBottom:'200px'}}>
+        <div className="container text-white" style={{marginBottom:'200px'}}>
             <h3 className="my-5 fw-bold" style={{color:'linear-gradient(red,yellow)'}}>Change Password</h3>
             {success && <Alert variant="success">{success}</Alert>}
                     {error && <Alert variant="danger">*{error}</Alert>}
@@ -93,7 +93,7 @@ const ChangePassword = ()=>{
                     onChange={(e) => setOldPassword(e.target.value)}
                     style={{background:'#eee'}}
                 />
-                 {errors?.current_password && <span className="text-danger d-block">{errors?.current_password}</span>}
+                 {errors?.current_password && <span className="text-white fw-bold d-block">*{errors?.current_password}</span>}
                 </Form.Group>
 
                 <Form.Group controlId="validationCustom02" className="my-3">
@@ -105,7 +105,7 @@ const ChangePassword = ()=>{
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                 {errors?.password && <span className="text-danger d-block">{errors?.password}</span>}
+                 {errors?.password && <span className="text-white fw-bold d-block">*{errors?.password}</span>}
                 </Form.Group>
 
                 <Form.Group controlId="validationCustom03" className="my-3">
@@ -117,12 +117,15 @@ const ChangePassword = ()=>{
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}    
                 />
-                 {errors?.password_confirmation && <span className="text-danger d-block">*Confirm Password is required!</span>}
+                 {errors?.password_confirmation && <span className="text-white fw-bold d-block">*Confirm Password is required!</span>}
                 </Form.Group>
 
-                <button type="submit" className="me-2 px-4 gap-2 d-flex border border-none btn p-2 text-light" style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px',width:'max-content'}}>
+                <button type="submit" className="me-2 px-4 gap-2 d-flex border border-none btn p-2 text-light" style={{
+                  // background:'linear-gradient(#fe4e36,#ff7715)',
+                  background:'#FCE05F',
+                  height:'40px',width:'max-content'}}>
                 {loader &&   <Spinner /> }
-                            <span className="font-bold ">Submit</span>
+                            <span className="fw-bold text-black ">Submit</span>
                 </button>
             </Form>
         </div>
