@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='navbars  border-bottom'>
+    <div className='navbars  border-bottom shadow-lg'>
       <div className='  py-sm-1 px-2 px-sm-3  d-flex  align-items-center  justify-content-between  text-light'>
         <NavLink className='text-decoration-none' to={'/'}>
           <div className='d-flex align-items-center'>
@@ -34,7 +34,7 @@ const Navbar = () => {
               <img src={logo} alt='logo' className='' height={'40px'} />
             </div>
             <div>
-              <h4 className='text-dark fw-bold mt-2'>TBB Slot & 3D</h4>
+              <h5 className='text-dark fw-bold mt-2'>TBB Slot & 3D</h5>
             </div>
           </div>
         </NavLink>
@@ -47,8 +47,9 @@ const Navbar = () => {
           ) : (
             <NavLink
               to={'/login'}
-              className=' btn btn-danger '
+              className=' btn btn-danger py-1 px-3  '
               style={{
+                fontSize:'13px',
                 backgroundColor: 'rgb(215, 25, 25)',
                 border: '1px solid gold',
               }}

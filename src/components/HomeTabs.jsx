@@ -62,16 +62,16 @@ const HomeTabs = ()=>{
                className="categories d-flex  
              flex-nowrap"   >
                 <Nav.Item className="categoryItem mx-1 mx-sm-2">
-                    <Nav.Link eventKey={0} className="text-center tabStyles" style={{background:'#b81212',color:'#ddd'}}>
-                        <img src={all_img} width={30} className=""/>
+                    <Nav.Link eventKey={0} className="text-center tabStyles pb-md-2" style={{color:'#fff'}}>
+                        <img src={all_img}   className="allImg"/>
                         <p className="p-0 m-0 text-center">All</p>
                     </Nav.Link>
                 </Nav.Item>
                 {
                     tabs && tabs.map((tab, index)=>{
                         return (
-                            <Nav.Item  className="categoryItem mx-1 mx-sm-2" key={index}>
-                                <Nav.Link eventKey={tab.id} className="text-center tabStyles" style={{background:'#b81212',color:'#ddd'}}>
+                            <Nav.Item  className="categoryItem mx-1 mx-sm-2 " key={index}>
+                                <Nav.Link eventKey={tab.id} className="text-center tabStyles pb-md-2" style={{ color:'#fff'}}>
                                     <img src={tab.img_url}   />
                                     <p className="p-0 m-0 text-center">{tab.name}</p>
                                 </Nav.Link>
@@ -80,7 +80,7 @@ const HomeTabs = ()=>{
                     })
                 }
                  <RouterNavLink   to={'/3d'} className="categoryItem mx-1 mx-sm-2" >
-                                <div   className="text-center tabStyles rounded" style={{background:'#b81212',color:'#ddd'}}>
+                                <div   className="text-center tabStyles rounded" style={{ color:'#fff'}}>
                                     <img src={threeD} style={{width:'40px',height:'35px'}} />
                                     <p className="p-0 m-0 text-center">3D</p>
                                 </div>
@@ -92,7 +92,7 @@ const HomeTabs = ()=>{
                 <Tab.Pane eventKey={0} className="px-3">
                     {/* <h3 className='fw-bold'>All Games</h3> */}
                         <div className="row">
-                        <h3 className='fw-bold my-3'>Slot Games</h3>
+                        <h4 className='fw-bold my-3'  style={{color:'#C80000'}}>Slot Games</h4>
                             {slots && slots.map((slot, index)=>{
                                     return  (
                                         <div className="col-md-2 col-4 px-1 my-2" key={index}>
@@ -102,7 +102,7 @@ const HomeTabs = ()=>{
                                         </div>
                                     );
                             })}
-                          <h3 className='fw-bold  my-3'>Live Casinos</h3>
+                          <h4 className='fw-bold  my-3'  style={{color:'#C80000'}}>Live Casinos</h4>
                             {lives && lives.map((live, index)=>{
                                     return  (
                                         <div className="col-md-2 col-4  px-1 my-2" key={index}>
@@ -112,7 +112,7 @@ const HomeTabs = ()=>{
                                         </div>
                                     );
                             })}
-                            <h3 className='fw-bold  my-3'>Sports</h3>
+                            <h4 className='fw-bold  my-3'  style={{color:'#C80000'}}>Sports</h4>
                              {sports && sports.map((sport, index)=>{
                                     return  (
                                         <div className="col-md-2 col-4  px-1 my-2" key={index}>
@@ -122,7 +122,7 @@ const HomeTabs = ()=>{
                                         </div>
                                     );
                             })}
-                            <h3 className='fw-bold  my-3'>Fishing</h3>
+                            <h4 className='fw-bold  my-3'  style={{color:'#C80000'}}>Fishing</h4>
 
                             {fishes && fishes.map((fish, index)=>{
                                     return  (
@@ -143,7 +143,7 @@ const HomeTabs = ()=>{
                     tabs && tabs.map((content, index)=>{
                         return (
                             <Tab.Pane eventKey={content.id} className="px-3 mt-4" key={index}>
-                                <h3 className='fw-bold'>{content.name}</h3>
+                                <h4 className='fw-bold ' style={{color:'#C80000'}}>{content.name}</h4>
                                 
                                 <div className="row">
                                 {content?.products && content?.products.map((product, index)=>{

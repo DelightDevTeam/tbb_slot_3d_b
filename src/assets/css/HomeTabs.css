@@ -4,9 +4,11 @@
     height: inherit !important;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    border: 3px solid #000  !important;
+    /* border: 3px solid #000  !important; */
     font-weight: bold;
     font-size: inherit !important;
+    background: #e60202 !important;
+    box-shadow: none !important;
     /* box-shadow: 0px 5px 10px 1px #b80000; */
 }
 .tabStyles{
@@ -16,8 +18,12 @@ max-width: max-content;
     padding: 8px 10px ;
     align-items: center;
 } 
- 
+.allImg{
+    width: 30px ;
+    height: 30px;
+   }
 .categories{
+    background: #C80000;
      overflow-x: scroll;
     justify-content: stretch !important;
    }
@@ -29,8 +35,16 @@ max-width: max-content;
      display: flex;
     align-items: stretch; 
     align-self: stretch ;
+    background: none !important;
+    vertical-align: middle;
+    text-wrap: nowrap !important;
+
 }
- 
+.nav-pills .nav-link{
+    border-radius: 0 !important;
+    padding: 10px 4px 0 4px;
+
+}
 @media screen and (min-width:900px) {
     /* .imgStyles{
         width: 250px;
@@ -50,7 +64,7 @@ max-width: max-content;
 }
 @media screen and (max-width:400px) {
     .categoryItem{
-        font-size: 13px;
+        font-size: 11px;
         line-height: 14px;
     }
    .tabStyles{
@@ -58,6 +72,11 @@ max-width: max-content;
    }
    .tabStyles img{
     width: 30px;
+    height: 28px;
+   }
+   .allImg{
+    width: 28px !important;
+    height: 28px;
    }
 }
 
