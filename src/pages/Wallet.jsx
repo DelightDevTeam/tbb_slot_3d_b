@@ -15,8 +15,8 @@ const WalletPage = () => {
 
     ]
   return (
-    <div className=' px-2 px-sm-5' style={{marginBottom:'150px'}}>
-      <div className='p-3 rounded-2' style={{background:'#E3B10E'}}>
+    <div className=' px-2 px-sm-5 pt-4' style={{marginBottom:'150px'}}>
+      <div className='p-3 rounded-2' style={{background:'#FCE05F'}}>
            <div className="  d-flex align-items-center">
             <FaUser size={18} color='#B81212' />
             <span  className='fw-bold ms-1'>Shwe Dinker</span>
@@ -26,7 +26,7 @@ const WalletPage = () => {
             <span className='fw-bold ms-1'>Ks: 293510</span>
            </div>
       </div>
-      <div className="my-3 rounded-4 border-warning p-3 " style={{background:'#E3B10E'}}>
+      <div className="my-3 rounded-4 border-warning p-3 " style={{background:'#FCE05F'}}>
         <div className="d-flex align-items-center justify-content-between gap-4 gap-sm-5">
             {bankActions.map((item)=>{
                 return <NavLink to={item.link} key={item.id} className='text-center'>

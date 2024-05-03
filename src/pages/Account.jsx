@@ -17,13 +17,13 @@ const AccountPage = () => {
      ]
   return (
     <div>
-      <div className="shadow-md my-4  px-2 py-1">
-      <h2 className="text-center fw-bold mb-3">Account</h2>
+      <div className="shadow-md my-4  px-2 py-1" style={{overflowX:'hidden'}}>
+      <h2 className="text-center text-white fw-bold mb-3">Account</h2>
 
        <div className="">
       {links.map((item)=>{
         return <NavLink to={item.link} >
-            <div className='mb-3 p-3 shadow-lg accountContainer border rounded-2 border-danger text-black d-flex align-items-center gap-2'>
+            <div className='mb-3 p-3   accountContainer border rounded-2 border-danger text-black d-flex align-items-center gap-2'>
             {item.icon}
             <p className='m-0 p-0 fw-bold'>{item.title}</p>
             </div>

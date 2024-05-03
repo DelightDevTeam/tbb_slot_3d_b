@@ -75,7 +75,7 @@ useEffect(() => {
   }
 }, [navigate]);
     return (
-        <div className="px-2 py-5 d-flex flex-column  align-items-center">
+        <div className="px-2 py-5 d-flex flex-column  text-white align-items-center">
       {/* <img
         src={profile}
         style={{ width: "90px", height: "90px", borderRadius: "100%" }}
@@ -120,8 +120,9 @@ useEffect(() => {
         </button>
 
         <NavLink to={'/changepassword'}
-          className="btn float-end text-light p-2 border border-none fw-bold"
-          style={{background:'linear-gradient(#fe4e36,#ff7715)'}}
+          className="btn float-end text-black p-2 border border-none fw-bold"
+          style={{ // background:'linear-gradient(#fe4e36,#ff7715)',
+            background:'#FCE05F',}}
           type="submit"
         >
           Change Password

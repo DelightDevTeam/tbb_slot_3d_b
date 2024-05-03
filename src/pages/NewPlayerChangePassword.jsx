@@ -117,13 +117,16 @@ const NewPlayerChangePassword = () => {
                     </Form.Group>
 
                     <div className="mt-3">
-                        <Button type="submit" className="me-2 px-4 border border-none d-flex align-items-center " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>
+                        <Button type="submit" className="me-2 px-4 border border-none d-flex align-items-center " style={{
+                          // background:'linear-gradient(#fe4e36,#ff7715)',
+                  background:'#FCE05F',
+                          height:'40px'}}>
                             {loader && 
                                     <div className="me-2">
                                         <Spinner />
                                     </div>
                                 }
-                            <span className="d-block">ဆက်လုပ်မည်</span>
+                            <span className="d-block text-black">ဆက်လုပ်မည်</span>
                         </Button>
                     </div>
 

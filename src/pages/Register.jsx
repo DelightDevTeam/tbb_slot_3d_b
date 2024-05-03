@@ -62,7 +62,11 @@ const Register = ()=>{
                 </Form.Group>
                 <div className=" d-flex" style={{fontSize: '12px'}}>
                     
-                    <Button type="submit" className="me-2 border border-none " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>မှတ်ပုံတင်ပါ</Button>
+                    <Button type="submit" className="me-2 border border-none " style={{
+                         // background:'linear-gradient(#fe4e36,#ff7715)',
+                  background:'#FCE05F',
+                  color:'#000',
+                        height:'40px'}}>မှတ်ပုံတင်ပါ</Button>
                     <span className="text-decoration-none text-dark my-2 ">အကောင့်ရှိပြီးသား ?</span>
                     <NavLink to={'/login'} className="text-decoration-none fw-bold my-2 text-success">login ဝင်ပါ</NavLink>
                 </div>

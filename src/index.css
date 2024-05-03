@@ -4,7 +4,8 @@
 
 body{
     /* font-family: 'Platypi',sans-serif; */
-     background-color: #fff;
+     /* background-color: #AB0000; */
+     background: #9F010C;
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
@@ -14,6 +15,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
+ 
 .swiper-pagination-bullet{
     background: #F7F7F7 !important;
     opacity: 1 !important;

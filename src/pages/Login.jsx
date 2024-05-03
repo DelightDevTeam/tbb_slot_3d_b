@@ -91,7 +91,7 @@ const Login = ()=>{
     return (
         <>
             <div className="container">
-                <h3 className="my-5 fw-bold text-center" style={{color:'linear-gradient(red,yellow)'}}>Login</h3>
+                <h3 className="my-5 fw-bold text-center text-white" style={{color:'linear-gradient(red,yellow)'}}>Login</h3>
                 {errMsg && (
                         <div className="alert alert-danger text-black fw-bold">
                           *{errMsg}
@@ -99,20 +99,21 @@ const Login = ()=>{
                     )}
             <Form     onSubmit={login}>
                 <Form.Group controlId="validationCustom01" className="my-3">
-                <Form.Label className="fw-bold">Player ID</Form.Label>
+                <Form.Label className="fw-bold text-white">Player ID</Form.Label>
                 <Form.Control
                      type="text"
+                     
                     placeholder="Player ID"
                     style={{background:'#eee'}}
                     onChange={(e)=>setPlayerId(e.target.value)}
                     value={playerId}
                 />
                  {error.user_name && (
-                                <div className="text-danger">* Required.</div>
+                                <div className="text-white">* Required.</div>
                             )}
                 </Form.Group>
                 <Form.Group controlId="validationCustom02" className="my-3">
-                <Form.Label className="fw-bold">Password</Form.Label>
+                <Form.Label className="fw-bold text-white">Password</Form.Label>
                 <Form.Control
                      type="password"
                     placeholder="Password"
@@ -121,20 +122,23 @@ const Login = ()=>{
                     value={password}
                 />
                  {error.password && (
-                                <span className="text-danger">*{error.password}</span>
+                                <span className="text-white">*{error.password}</span>
                             )}
                 </Form.Group>
                 
                 
                 <div className=" d-flex" style={{fontSize: '12px'}}>
                     
-                    <Button type="submit" className="me-2 border border-none d-flex align-items-center " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>
+                    <Button type="submit" className="me-2 border border-none d-flex align-items-center " style={{
+                      // background:'linear-gradient(#fe4e36,#ff7715)',
+                  background:'#FCE05F',
+                      height:'40px'}}>
                     {loading && 
                                     <div className="me-2">
                                         <Spinner />
                                     </div>
                                 }
-                        <span>လော့အင်ဝင်ပါ</span></Button>
+                        <span className="text-black">လော့အင်ဝင်ပါ</span></Button>
                     
                 </div>
             </Form>

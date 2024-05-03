@@ -34,7 +34,7 @@ const Carousel = () => {
         </SwiperSlide>
 
     })}
-    <marquee className='p-2 text-light bg-dark' >
+    <marquee className='mb-0 p-2 text-light bg-dark' >
         {bannerText.text && bannerText.text}
       </marquee>
   </Swiper>
