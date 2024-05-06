@@ -96,6 +96,7 @@ console.log('numbers',numbers)
  }
  const delNumber=(number)=>{
      setUser3D(user3D.filter(n=>n.number!==number));
+     setNumbers(numbers.filter(n=>n!==number))
      const newData=user3D.filter(n=>n.number!==number)
      localStorage.setItem('user-3d-bet',JSON.stringify(newData))
 
@@ -113,10 +114,10 @@ const userBetConfirm=()=>{
     setNumbers([]);
     setUser3D([]);
     navigate('/3d-bet-history')
-    
-}
+ }
+ console.log('numbers',numbers)
   return (
-    <div className="mx-2" style={{marginBottom:'100px'}}>
+    <div className="mx-2 mt-4" style={{marginBottom:'100px'}}>
         <div style={{background:'#E3B10E'}} className="startProfile mb-3 p-2 d-flex flex-column gap-2 ">
         <span className=" mt-3 ">ဂဏန်းအရေအတွက် : 
          <span className="mx-1 fw-bold">{user3D?.length}</span> ကွက်

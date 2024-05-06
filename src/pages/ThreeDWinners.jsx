@@ -16,8 +16,8 @@ const ThreeDWinnersPage = () => {
         {id:5,name:'Shoon Thiri May ',img:'https://new-static-ui.vercel.app/assets/img/profile.png',bet:'30,000',win:'2,400,000'},
     ];
   return (
-    <div className='px-2 ' style={{marginBottom:'150px'}} >
-      <h5 className="text-center fw-bold mb-5">3D ကံထူးရှင်များ စာရင်း</h5>
+    <div className='px-2 ' style={{marginBottom:'150px',overflowX:'hidden'}} >
+      <h5 className="text-center fw-bold my-5 text-white">3D ကံထူးရှင်များ စာရင်း</h5>
       {/* Top Winners */}
       <div className="row mb-4">
         {topWinners.map((winner)=>{
@@ -37,7 +37,7 @@ const ThreeDWinnersPage = () => {
         
         
       </div>
-      <div className="twoDWinnerInfo p-3 d-flex align-items-center justify-content-between">
+      <div className="twoDWinnerInfo p-3 d-flex align-items-center justify-content-between rounded-4">
         <div>
           <h6>Updated at:</h6>  
           <h6>Nov 17, 2023, 04:30 PM</h6>
