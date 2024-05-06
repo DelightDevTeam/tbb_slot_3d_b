@@ -42,8 +42,8 @@ const ThreeDBetPage = () => {
     localStorage.setItem('user-3d-bet',JSON.stringify(user3D))
    }
    return (
-    <div className='px-2 px-sm-5' style={{marginBottom:'150px'}}>
-    <div style={{background:'#E3B10E'}} className='p-3  d-flex align-items-center justify-content-between border rounded ' >
+    <div className='px-2 px-sm-5 pt-4' style={{marginBottom:'150px'}}>
+    <div style={{background:'#E3B10E'}} className='p-3  d-flex align-items-center justify-content-between border border-warning rounded-3 fw-semibold' >
    <div className='d-flex gap-2 align-items-center'>
    <FaWallet color={'#B81212'}/>
    <div>
@@ -70,7 +70,7 @@ const ThreeDBetPage = () => {
                          
                      </Form.Group>
                     <div className='text-start w-100'>
-                    <small className="fw-bold ">ငွေပမာဏ (အနည်းဆုံး 100 ကျပ်)</small>
+                    <small className="fw-bold text-white ">ငွေပမာဏ (အနည်းဆုံး 100 ကျပ်)</small>
                     </div>
                      <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Control type="number" 
@@ -96,9 +96,9 @@ const ThreeDBetPage = () => {
                      </div>
                      </div>
    </div> 
-   <p className='m-0 p-0 mb-1'>ရွေးချယ်ထားသောဂဏန်းများ - 
+   <p className='m-0 p-0 mb-1 mt-3 text-white'>ရွေးချယ်ထားသောဂဏန်းများ - 
    <span className="fw-bold ms-1">{user3D.length}</span> </p>
-   <div className='p-3 rounded-3 mb-2 d-flex flex-wrap align-items-center gap-2 gap-sm-4' style={{border:'2px solid grey',minHeight:'100px'}}>
+   <div className='p-3 rounded-3 mb-2 d-flex flex-wrap align-items-center gap-2 gap-sm-4' style={{border:'2px solid goldenrod',minHeight:'100px'}}>
         {user3D.map((item,index)=>{
             return <div className='numberBox rounded-3 bg-warning d-flex align-items-center justify-content-center' style={{width:'70px',height:'35px'}}>
                     <span>{item.number}</span>
@@ -137,11 +137,12 @@ const ThreeDBetPage = () => {
                     </tbody>
             </Table> */}
            
-            <Button onClick={user3dBet} className="me-2 px-4 border border-none d-flex align-items-center " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>
-            <NavLink to={'/3d/confirm'}>
+            <Button onClick={user3dBet} className="me-2 border border-none d-flex align-items-center " style={{background:'linear-gradient(#fe4e36,#ff7715)',height:'40px'}}>
+            <NavLink to={'/3d/confirm'} className={' px-4 '}  >
                               <span className="d-block">ထိုးမည်</span>
                               </NavLink>
                          </Button>
+                         
             
                
     </div>

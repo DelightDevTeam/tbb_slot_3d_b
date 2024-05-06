@@ -13,7 +13,7 @@ const ThreeDHistoryPage = () => {
     ]
   return (
     <div className='px-2 px-sm-5 ' style={{marginBottom:'150px'}}>
-        <h5 className="fw-bold text-center">3D ထီပေါက်စဥ်</h5>
+        <h5 className="fw-bold text-center mt-4 text-white">3D ထီပေါက်စဥ်</h5>
        {/* 3D lists */}
        <div className='mt-4' >
       {threeDListsArray.map((item)=>{

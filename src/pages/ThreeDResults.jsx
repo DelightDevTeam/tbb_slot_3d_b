@@ -19,8 +19,8 @@ const threeDListsArray=[
     {id:7,date:'16.08.2023 ',threeD:'970'},
     {id:8,date:'16.08.2023 ',threeD:'970'},
 ]
-  return (<div className='twoDBetHistory mx-2 mx-sm-0'>
-    <h5 className=" my-3 fw-bold text-center">3D မှတ်တမ်း</h5>
+  return (<div className='twoDBetHistory mx-2 mx-sm-0 pb-5 mb-5'>
+    <h5 className=" my-3 fw-bold text-center text-white">3D မှတ်တမ်း</h5>
     <Tabs
       defaultActiveKey="profile"
       id="uncontrolled-tab-example"

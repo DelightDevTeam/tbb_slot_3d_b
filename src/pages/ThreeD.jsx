@@ -25,7 +25,7 @@ const ThreeDPage = () => {
     <div className='px-2 px-sm-5' style={{marginBottom:'150px', marginTop: "20px"}}>
       <div className="row">
           <div className="col-md-6">
-            <div style={{background:'#E3B10E'}} className='p-3  d-flex align-items-center justify-content-between border rounded-4 shadow' >
+            <div style={{background:'#E3B10E'}} className='p-3  d-flex align-items-center justify-content-between border border-warning rounded-4 shadow fw-bold' >
                 <div className='d-flex gap-2 align-items-center'>
                   <div>
                     <small><FaWallet color={'#B81212'} className='me-2'/>လက်ကျန်ငွေ: </small> <br/>
@@ -42,13 +42,13 @@ const ThreeDPage = () => {
               {threeDSubNav.map((item)=>{
                 return <NavLink to={item.link} className='text-black text-decoration-none text-center ' >
                     {item.icon}<br/>
-                    <small className='d-block mt-2'>{item.title}</small>
+                    <small className='d-block mt-2 fw-bold'>{item.title}</small>
                 </NavLink>
               })}
             </div>
             <div className="text-center my-4">
               <NavLink to={'/3d/bet'} > 
-                <Button className="btn btn-warning shadow" variant="primary"  style={{background:'#E3B10E'}}>
+                <Button className="btn btn-warning shadow fw-bold" variant="primary"  style={{background:'#E3B10E'}}>
                     ထိုးမည်
                 </Button>
               </NavLink>
